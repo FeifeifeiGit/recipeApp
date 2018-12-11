@@ -1,0 +1,35 @@
+{
+  "name": "recipe",
+  "version": "1.0.0",
+  "description": "A recipe app with vanilla javaScript ### What I can learn from this app + plan app with MVC pattern to make project mantainal + configurate and use webpack, NPM and babel + asynchronous javascript",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --mode development --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FeifeifeiGit/recipeApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FeifeifeiGit/recipeApp/issues"
+  },
+  "homepage": "https://github.com/FeifeifeiGit/recipeApp#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.26.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-polyfill": "^6.26.0",
+    "fractional.js": "^1.0.0"
+  }
+}
