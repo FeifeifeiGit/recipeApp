@@ -15,7 +15,6 @@ import * as likesView from './views/likesView';
 * Linked recipe
 */
 const state = {};
-window.state = state;
 const controlSearch = async () => {
     //get the query from the view
     const query = searchView.getInput();
@@ -55,8 +54,7 @@ elements.searchResultPages.addEventListener('click', e => {
 /*
 LIKES Controller
 */
-state.likes = new Likes();
-likesView.toggleLikeMenu(state.likes.getNumLikes());
+
 const constrolLike = () => {
     if(!state.likes) state.likes = new Likes();
     const currentID = state.recipe.id;
@@ -84,6 +82,15 @@ const constrolLike = () => {
 
     likesView.toggleLikeMenu(state.likes.getNumLikes());
 }
+
+//Restore Liked recipe on page load
+window.addEventListener('load', () => {
+    state.likes = new Likes();
+    state.likes.readStorage();
+    likesView.toggleLikeMenu(state.likes.getNumLikes());
+    //render the existing likes menu
+    state.likes.likes.forEach(like => likesView.renderLike(like));
+});
 
 
 /*RECIPE CONTROLLER*/
