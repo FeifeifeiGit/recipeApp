@@ -4,7 +4,10 @@ export const elements = {
     searchResultList: document.querySelector('.results__list'),
     searchResult: document.querySelector('.results'),
     searchResultPages: document.querySelector('.results__pages'),
-    recipe: document.querySelector('.recipe')
+    recipe: document.querySelector('.recipe'),
+    shopping: document.querySelector('.shopping__list'),
+    likesMenu: document.querySelector('.likes__field'),
+    likeList: document.querySelector('.likes__list')
 }
 //for elements that are not on the page yet, ex the loader, so cannot select as above
 export const elementsStrings = {

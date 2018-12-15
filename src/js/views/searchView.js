@@ -6,7 +6,7 @@ export const clearInput = () => {elements.searchInput.value = ''};
 export const highlightsSelected = (id) => {
     const resultArr = Array.from(document.querySelectorAll('.results__link'));
     resultArr.forEach(el => el.classList.remove('results__link--active'));
-    document.querySelector(`a[href="#${id}"]`).classList.add('results__link--active');
+    document.querySelector(`.results__link[href="#${id}"]`).classList.add('results__link--active');
 }
 //render results to the product list
 const renderRecipe = recipe => {
